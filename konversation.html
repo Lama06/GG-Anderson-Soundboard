@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>GG Anderson Soundboard</title>
+		
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<header>
+			<div class="header-top">
+				<h1><span style="color: gold;" title="GOOD GAME!">GG</span> Anderson Board<span></h1>
+				
+				<h1 title="Dummheit ist dumm" class="credits">Version 1.0 by WeberGMBH</h1>
+			</div>
+			
+			<div class="header-links">			
+				<ul>
+					<li><a href="#">Konversation</a></li>
+					<li><a href="sätze.html">Sätze</a></li>
+					<li><a href="songs.html">Songs</a></li>
+				</ul>
+			</div>
+			
+		</header>
+		
+		<div class="sidebar">
+			<button onclick="stopAudio()">PAUSE</button>
+		</div>
+		
+		<div class="soundboard-container">
+		<div class="soundboard">
+			<button onclick="playAudio('Hallo hier ist der GG Anderson.mp3');">Hallo hier ist der GG Anderson</button>
+			<button onclick="playAudio('Ja alles gut!.mp3');">Ja alles gut!</button>
+			<button onclick="playAudio('ja.mp3');">Ja (Leise)</button>
+			<button onclick="playAudio('Septemer, Oktober, November.mp3');">Septemer, Oktober, November</button>
+			<button onclick="playAudio('Ich grüße ganz herzlich alle Leser vom Schlagerplaneten.mp3');">Ich grüße ganz herzlich alle Leser vom Schlagerplaneten</button>
+			<button onclick="playAudio('Äh.mp3');">Äh</button>
+			<button onclick="playAudio('Ähm.mp3');">Ähm</button>
+			<button onclick="playAudio('Da bin ich sehr dankbar.mp3');">Da bin ich sehr dankbar</button>
+			<button onclick="playAudio('Das ist natürlich blöd.mp3');">Das ist natürlich blöd</button>
+			<button onclick="playAudio('');"></button>
+			<button onclick="playAudio('');"></button>
+			<button onclick="playAudio('');"></button>
+			<button onclick="playAudio('');"></button>
+			<button onclick="playAudio('');"></button>
+			<button onclick="playAudio('');"></button>
+			<button onclick="playAudio('');"></button>
+			<button onclick="playAudio('');"></button>
+		</div>
+		</div>
+		
+		<script>
+			var audio = new Audio();
+			
+			function playAudio(name, volume = 1) {
+				audio.src = ("Sounds/"+name);
+				audio.volume = volume;
+				audio.play();
+			}
+		
+			function stopAudio() {
+				audio.pause();
+			}
+		</script>
+	</body>
+</html>

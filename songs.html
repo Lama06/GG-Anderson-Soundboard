@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>GG Anderson Soundboard</title>
+		
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<header>
+			<div class="header-top">
+				<h1><span style="color: gold;" title="GOOD GAME!">GG</span> Anderson Board<span></h1>
+				
+				<h1 title="Dummheit ist dumm" class="credits">Version 1.0 by WeberGMBH</h1>
+			</div>
+			
+			<div class="header-links">			
+				<ul>
+					<li><a href="konversation.html">Konversation</a></li>
+					<li><a href="sätze.html">Sätze</a></li>
+					<li><a href="#">Songs</a></li>
+				</ul>
+			</div>
+			
+		</header>
+		
+		<div class="sidebar">
+			<button onclick="stopAudio()">PAUSE</button>
+		</div>
+		
+		<div class="soundboard">
+			<button onclick="playAudio('Alles wird gut.mp3', 0.4);">Alles wird gut</button>
+			<button onclick="playAudio('Das bin ich.mp3', 0.4);">Das bin ich</button>
+			<button onclick="playAudio('Der einzige der da ist.mp3', 0.4);">Der einzige der da ist</button>
+			<button onclick="playAudio('Du bist du.mp3', 0.4);">Du bist du</button>
+			<button onclick="playAudio('Du bist mein kleiner Diamant.mp3', 0.4);">Du bist mein kleiner Diamant</button>
+			<button onclick="playAudio('Du liegst in meiner Hand.mp3', 0.4);">Du liegst in meiner Hand</button>
+			<button onclick="playAudio('Du wirst mich verbrennen.mp3', 0.4);">Du wirst mich verbrennen</button>
+			<button onclick="playAudio('Ein Feuer ist entflammt.mp3', 0.4);">Ein Feuer ist entflammt</button>
+			<button onclick="playAudio('Er spielte doch mit dir rusisches Roulette.mp3', 0.3);">Er spielte doch mit dir rusisches Roulette</button>
+			<button onclick="playAudio('Ohne Zweifel.mp3', 0.4);">Ohne Zweifel</button>
+			<button onclick="playAudio('Bist du sicher.mp3', 0.4);">Bist du sicher?</button>
+			<button onclick="playAudio('Du.mp3', 0.4);">Du</button>
+			<button onclick="playAudio('Genau, du kanst mir blind vertrauen.mp3', 0.3);">Genau, du kanst mir blind vertrauen</button>
+			<button onclick="playAudio('Hab keine Angst.mp3', 0.3);">Hab keine Angst</button>
+			<button onclick="playAudio('Ich bin für dich da.mp3', 0.3);">Ich bin für dich da</button>
+			<button onclick="playAudio('Ich habe dich gewarnt.mp3', 0.3);">Ich habe dich gewarnt</button>
+			<button onclick="playAudio('Ich lass dich niemals mehr im Stich.mp3', 0.3);">Ich lass dich niemals mehr im Stich</button>
+			<button onclick="playAudio('Ich will dich beschützen.mp3', 0.3);">Ich will dich beschützen</button>
+			<button onclick="playAudio('Tränen sagen mehr als viele Worte.mp3', 0.3);">Tränen sagen mehr als viele Worte</button>
+		</div>
+		
+		<script>
+			var audio = new Audio();
+			
+			function playAudio(name, volume = 1) {
+				audio.src = ("Sounds/"+name);
+				audio.volume = volume;
+				audio.play();
+			}
+		
+			function stopAudio() {
+				audio.pause();
+			}
+		</script>
+	</body>
+</html>

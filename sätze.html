@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>GG Anderson Soundboard</title>
+		
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<header>
+			<div class="header-top">
+				<h1><span style="color: gold;" title="GOOD GAME!">GG</span> Anderson Board<span></h1>
+				
+				<h1 title="Dummheit ist dumm" class="credits">Version 1.0 by WeberGMBH</h1>
+			</div>
+			
+			<div class="header-links">			
+				<ul>
+					<li><a href="konversation.html">Konversation</a></li>
+					<li><a href="#">Sätze</a></li>
+					<li><a href="songs.html">Songs</a></li>
+				</ul>
+			</div>
+			
+		</header>
+		
+		<div class="sidebar">
+			<button onclick="stopAudio()">PAUSE</button>
+		</div>
+		
+		<div class="soundboard">
+			<button onclick="playAudio('Also ich bin jetzt nicht so der Internet Freak.mp3');">Also ich bin jetzt nicht so der Internet Freak</button>
+			<button onclick="playAudio('Bin zufrieden mit Baujahr 49.mp3');">Bin zufrieden mit Baujahr 49</button>
+			<button onclick="playAudio('Die jungen Leute lieben es.mp3');">Die jungen Leute lieben es</button>
+			<button onclick="playAudio('Die Zeit ist schon gut.mp3');">Die Zeit ist schon gut</button>
+			<button onclick="playAudio('Diplomatie gehört nicht zu meinen Stärken.mp3');">Diplomatie gehört nicht zu meinen Stärken</button>
+			<button onclick="playAudio('Es macht Spaß.mp3');">Es macht Spaß</button>
+			<button onclick="playAudio('Ich geh auf Tournee.mp3');">Ich geh auf Tournee</button>
+			<button onclick="playAudio('Ich hab in meinem Leben erst zwei Emails verschickt.mp3');">Ich hab in meinem Leben erst zwei Emails verschickt</button>
+			<button onclick="playAudio('Ich klaue Benzin.mp3');">Ich klaue Benzin</button>
+			<button onclick="playAudio('Ich meine wir haben Revolutionen erlebt.mp3');">Ich meine wir haben Revolutionen erlebt</button>
+			<button onclick="playAudio('Ich muss das bezahlen.mp3');">Ich muss das bezahlen</button>
+			<button onclick="playAudio('Ich sag immer das was ich denke.mp3');">Ich sag immer das was ich denke</button>
+			<button onclick="playAudio('Ich stelle einen Song ins Netz.mp3');">Ich stelle einen Song ins Netz</button>
+			<button onclick="playAudio('in der Musik.mp3');">in der Musik</button>
+			<button onclick="playAudio('Null.mp3');">Null</button>
+			<button onclick="playAudio('Wenn man sich das neue Video von GG Anderson anschauen will.mp3');">Wenn man sich das neue Video von GG Anderson anschauen will</button>
+			<button onclick="playAudio('Wir ham den RocknRoll erlebt.mp3');">Wir ham den RocknRoll erlebt</button>
+			<button onclick="playAudio('Wir ham die beste Musik aller Zeiten.mp3');">Wir ham die beste Musik aller Zeiten</button>
+			<button onclick="playAudio('');"></button>
+			
+		</div>
+		
+		<script>
+			var audio = new Audio();
+			
+			function playAudio(name, volume = 1) {
+				audio.src = ("Sounds/"+name);
+				audio.volume = volume;
+				audio.play();
+			}
+		
+			function stopAudio() {
+				audio.pause();
+			}
+		</script>
+	</body>
+</html>
